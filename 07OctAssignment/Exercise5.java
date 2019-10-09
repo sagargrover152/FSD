@@ -3,7 +3,7 @@ import java.util.Scanner;
 class AgeValidateException extends RuntimeException{
 
 	String ageNotValid(){
-		return "First Name and Last Name cant be empty";
+		return "Age is less than 15";
 	}
 }
 class Exercise5{
@@ -12,7 +12,13 @@ class Exercise5{
 		
 		Scanner sc = new Scanner(System.in);
 		int age = sc.nextInt();
-		if(age<15)
-			throw new AgeValidateException();
+		if(age<15){
+			try{
+				throw new AgeValidateException();
+			}
+			catch(AgeValidateException ave){
+				System.out.println(ave.ageNotValid());
+			}
+		}
 	}
 }
