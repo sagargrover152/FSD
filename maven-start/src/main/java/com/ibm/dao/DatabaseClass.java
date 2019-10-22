@@ -13,7 +13,7 @@ import com.ibm.bean.Transactions;
 import com.mysql.jdbc.PreparedStatement;
 
 
-public class DatabaseClass {
+public class DatabaseClass implements DatabaseInterface {
 	
 	public Connection createConnection() {
 		Connection dbCon = null;
