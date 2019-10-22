@@ -6,7 +6,7 @@ import com.ibm.bean.Credentials;
 import com.ibm.bean.Transactions;
 import com.ibm.dao.DatabaseClass;
 
-public class ServiceClass {
+public class ServiceClass implements ServiceInterface {
 	DatabaseClass dbc = new DatabaseClass();
 	public Boolean validateMobNum(long mobnum) {
 		if(mobnum!=0)
